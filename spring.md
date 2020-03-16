@@ -138,7 +138,8 @@ Here is how to enable these annotations. Just add these two bean definitions to 
 <!-- Enable Shiro Annotations for Spring-configured beans.  Only run after -->
 <!-- the lifecycleBeanProcessor has run: -->
 <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor"/>
-    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+
+<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
     <property name="securityManager" ref="securityManager"/>
 </bean>
 ```
